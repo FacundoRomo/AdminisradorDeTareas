@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.tarea-contenedor {
+  width: 100%;
+  min-height: 50px;
+  margin: 5px 15px;
+  padding: 0px 15px 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tarea-contenedor:hover {
+  filter: brightness(1.5);
+}
+
+.tarea-texto {
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  overflow-wrap: anywhere;
+  padding: 10px 0;
+  color: #ddd;
+}
+
+.tarea-icono-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+
+.tarea-icono {
+  color: #ddd;
+}
+
+.tarea-contenedor:nth-child(3n + 1) {
+  background-color: #234ebb;
+  -webkit-box-shadow: 3.5px 6px 10px -1px #234ebb;
+  -moz-box-shadow: 3.5px 6px 10px -1px #234ebb;
+  box-shadow: 3.5px 6px 10px -1px #234ebb;
+}
+
+.tarea-contenedor:nth-child(3n + 2) {
+  background-color: #1e61c0;
+  -webkit-box-shadow: 3.5px 6px 10px -1px #1e61c0;
+  -moz-box-shadow: 3.5px 6px 10px -1px #1e61c0;
+  box-shadow: 3.5px 6px 10px -1px #1e61c0;
+}
+
+.tarea-contenedor:nth-child(3n + 3) {
+  background-color: #1484cb;
+  -webkit-box-shadow: 3.5px 6px 7px -1px #1484cb;
+  -moz-box-shadow: 3.5px 6px 7px -1px #1484cb;
+  box-shadow: 3.5px 6px 7px -1px #1484cb;
+}
+
+.tarea-contenedor.completa {
+  background-color: #576276;
+  -webkit-backdrop-filter: blur(11px);
+  backdrop-filter: blur(11px);
+  text-decoration: line-through;
+  box-shadow: none;
+}
+
+@media (max-width:450px){
+  .tarea-contenedor{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
