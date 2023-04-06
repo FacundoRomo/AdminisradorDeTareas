@@ -39,8 +39,8 @@ function ListaDeTareas() {
     <>
       <Form onSubmit={ agregarTarea }/>
       <div className="tareas-lista-contenedor">
-        {
-           tareas.map((tarea) =>
+        {{if(tareas){ 
+          tareas.map((tarea) =>
           <Tarea
             key={tarea.id}
             id={tarea.id}
@@ -48,7 +48,8 @@ function ListaDeTareas() {
             completada={tarea.completada}
             eliminarTarea={eliminarTarea}
             completarTarea={completarTarea} />
-          )
+          )}}
+          
         }
       </div>
     </>
