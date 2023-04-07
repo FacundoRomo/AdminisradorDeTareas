@@ -5,12 +5,8 @@ import Tarea from "../Tarea/tarea"
 
 function ListaDeTareas() {
 
-  const [tareas , setTareas]= useState(JSON.parse(localStorage.getItem("tareas")));
+  const [tareas , setTareas]= useState((JSON.parse(localStorage.getItem("tareas"))) ? JSON.parse(localStorage.getItem("tareas")) : []);
 
-  // Obtener las tareas en el localStorage
-  if(JSON.parse(localStorage.getItem("tareas"))){
-    
-  }
   const agregarTarea = tarea =>{
     if(tarea.texto.trim()){
       tarea.texto=tarea.texto.trim();
