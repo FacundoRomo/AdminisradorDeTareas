@@ -17,14 +17,14 @@ function Form( props ) {
       texto: input,
       completada: false
     }
-    props.onSubmit(tareaNueva)
-  }
-
-
+    props.onSubmit(tareaNueva);
+    document.formulario.texto.value="";
+    }
   return(
     <form 
       className="tarea-formulario"
-      onSubmit={manejarEnvio}>
+      onSubmit={manejarEnvio}
+      name="formulario">
       <input
         className="tarea-input"
         type="text"
@@ -32,7 +32,9 @@ function Form( props ) {
         name="texto"
         onChange={manejarCambio}
       />
-      <button className="tarea-boton">Agregar Tarea</button>
+      <button className="tarea-boton">
+        Agregar Tarea
+        </button>
     </form>
   )
 }
