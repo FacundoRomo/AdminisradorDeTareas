@@ -9,7 +9,7 @@ function ListaDeTareas() {
 
   // Obtener las tareas en el localStorage
   if(JSON.parse(localStorage.getItem("tareas"))){
-
+    
   }
   const agregarTarea = tarea =>{
     if(tarea.texto.trim()){
@@ -44,7 +44,7 @@ function ListaDeTareas() {
       <Form onSubmit={ agregarTarea }/>
       <div className="tareas-lista-contenedor">
         {
-          tareas ? (tareas.map((tarea) =>
+          tareas.map((tarea) =>
           <Tarea
             key={tarea.id}
             id={tarea.id}
@@ -52,7 +52,7 @@ function ListaDeTareas() {
             completada={tarea.completada}
             eliminarTarea={eliminarTarea}
             completarTarea={completarTarea} />
-          )) : null 
+          )
         }
       </div>
     </>
